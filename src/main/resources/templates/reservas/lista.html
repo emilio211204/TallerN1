@@ -67,7 +67,8 @@
 
                 <a th:href="@{/reservas/eliminar/{id}(id=${reserva.id})}"
                    class="btn btn-sm btn-danger"
-                   sec:authorize="hasRole('ADMIN')">Eliminar</a>
+                   sec:authorize="hasRole('ADMIN')"
+                   onclick="return confirm('¿Estás seguro de que deseas eliminar esta reserva?');">Eliminar</a>
             </td>
 
         </tr>
