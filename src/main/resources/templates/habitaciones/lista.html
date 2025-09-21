@@ -54,7 +54,9 @@
             <td><span th:text="${habitacion.disponible} ? 'Sí' : 'No'"></span></td>
             <td>
                 <a class="btn btn-sm btn-warning" th:href="@{/habitaciones/editar/{id}(id=${habitacion.id})}">Editar</a>
-                <a class="btn btn-sm btn-danger" th:href="@{/habitaciones/eliminar/{id}(id=${habitacion.id})}">Eliminar</a>
+                <a th:href="@{/habitaciones/eliminar/{id}(id=${habitacion.id})}"
+                   class="btn btn-sm btn-danger"
+                   onclick="return confirm('¿Estás seguro de que deseas eliminar esta habitación?');">Eliminar</a>
             </td>
         </tr>
         </tbody>

@@ -50,7 +50,9 @@
             <td th:text="${cliente.telefono}"></td>
             <td>
                 <a class="btn btn-sm btn-warning" th:href="@{/clientes/editar/{id}(id=${cliente.id})}">Editar</a>
-                <a class="btn btn-sm btn-danger" th:href="@{/clientes/eliminar/{id}(id=${cliente.id})}">Eliminar</a>
+                <a th:href="@{/clientes/eliminar/{id}(id=${cliente.id})}"
+                   class="btn btn-sm btn-danger"
+                   onclick="return confirm('¿Estás seguro de que deseas eliminar este cliente?');">Eliminar</a>
             </td>
         </tr>
         </tbody>
